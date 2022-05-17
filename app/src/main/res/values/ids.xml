@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="log_password_field" type="id" />
+    <item name="log_email_field" type="id" />
+    <item name="progressBarScreen" type="id" />
+    <item name="reg_email_field" type="id" />
+    <item name="reg_password_field" type="id" />
+    <item name="reg_username_field" type="id" />
+    <item name="add_class" type="id" />
+    <item name="create_class" type="id" />
+    <item name="class_banner" type="id" />
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">School Learning Center</string>
+    <string name="login">Login</string>
+    <string name="regis">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember">Remember me</string>
+    <string name="glogin">Login With Google</string>
+    <string name="have_acc">Already Have An Account?</string>
+    <string name="fullName">Full Name</string>
+    <string name="no_acc">Don\'t Have An Account?</string>
+</resources>
