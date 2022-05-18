@@ -3,9 +3,9 @@ package com.slc.prototype
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class AddClassActivity : AppCompatActivity() {
+class JoinClassActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_class)
+        setContentView(R.layout.activity_join_class)
     }
 }

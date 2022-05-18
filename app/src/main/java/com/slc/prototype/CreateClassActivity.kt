@@ -96,6 +96,7 @@ class CreateClassActivity : AppCompatActivity() {
     fun backToProfile(view: View) {
         onBackPressed()
     }
+
     fun confirmChange(view: View) {
         val userid = auth.uid
         val classId = UUID.randomUUID().toString()
@@ -107,13 +108,14 @@ class CreateClassActivity : AppCompatActivity() {
             "classPictureUrl" to "https://firebasestorage.googleapis.com/v0/b/slc-prototype.appspot.com/o/SLC%20Logo-07.png?alt=media&token=2030e52b-0cc4-4fb0-ac6a-ce9dd5f0c52b",
             "classBannerUrl" to "",
             "classAdmin" to userid,
-            "classMember" to arrayListOf<String>()
+            "classMember" to arrayListOf<String>(),
+            "fileList"  to arrayListOf<String>()
         )
         val userRef = Firebase.firestore.collection("User").document(userid!!)
         val classRef = Firebase.firestore.collection("Class")
-        userRef.update("userClassList", FieldValue.arrayUnion(classId))
         classRef.document(classId)
             .set(newClassData).addOnSuccessListener {
+                userRef.update("userClassList", FieldValue.arrayUnion(classId))
                 classDatabaseId = classId
                 uploadImageToFirebaseStorage()
             }

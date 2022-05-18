@@ -2,6 +2,7 @@ package com.slc.prototype
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -76,9 +77,24 @@ class ProfileActivity : AppCompatActivity() {
         onPause()
     }
 
-    fun manageClass(view: View){
-        val intent = Intent(this, ClassManagementActivity::class.java)
+    fun createClass(view: View){
+        val intent = Intent(this, CreateClassActivity::class.java)
         startActivity(intent)
+        add_class_ui.visibility = View.GONE
+    }
+
+    fun joinClass(view: View){
+        val intent = Intent(this, CreateClassActivity::class.java)
+        startActivity(intent)
+        add_class_ui.visibility = View.GONE
+    }
+
+    fun addClass(view: View){
+        add_class_ui.visibility = View.VISIBLE
+    }
+
+    fun closeOverlay(view: View){
+        add_class_ui.visibility = View.GONE
     }
 
     fun home(view: View){

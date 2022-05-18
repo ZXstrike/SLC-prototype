@@ -1,1 +1,6 @@
-<root />
+<root>
+    <item
+        name='androidx.appcompat.app.AppCompatViewInflater android.content.Context themifyContext(android.content.Context, android.util.AttributeSet, boolean, boolean)'>
+        <annotation name='androidx.annotation.NonNull' />
+    </item>
+</root>

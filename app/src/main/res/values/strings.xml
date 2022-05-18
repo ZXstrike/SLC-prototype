@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">School Learning Center</string>
-    <string name="login">Login</string>
-    <string name="regis">Register</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="remember">Remember me</string>
-    <string name="glogin">Login With Google</string>
-    <string name="have_acc">Already Have An Account?</string>
-    <string name="fullName">Full Name</string>
-    <string name="no_acc">Don\'t Have An Account?</string>
+    <string name="app_name" translatable="false">School Learning Center</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="regis" translatable="false">Register</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="remember" translatable="false">Remember me</string>
+    <string name="glogin" translatable="false">Login With Google</string>
+    <string name="have_acc" translatable="false">Already Have An Account?</string>
+    <string name="fullName" translatable="false">Full Name</string>
+    <string name="no_acc" translatable="false">Don\'t Have An Account?</string>
 </resources>
