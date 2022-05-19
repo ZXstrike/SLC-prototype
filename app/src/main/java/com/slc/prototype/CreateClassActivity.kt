@@ -113,11 +113,13 @@ class CreateClassActivity : AppCompatActivity() {
         )
         val userRef = Firebase.firestore.collection("User").document(userid!!)
         val classRef = Firebase.firestore.collection("Class")
-        classRef.document(classId)
-            .set(newClassData).addOnSuccessListener {
-                userRef.update("userClassList", FieldValue.arrayUnion(classId))
-                classDatabaseId = classId
-                uploadImageToFirebaseStorage()
+        userRef.update("userClassList", FieldValue.arrayUnion(classId))
+            .addOnSuccessListener {
+                classRef.document(classId)
+                    .set(newClassData).addOnSuccessListener {
+                        classDatabaseId = classId
+                        uploadImageToFirebaseStorage()
+                    }
             }
         onBackPressed()
     }
