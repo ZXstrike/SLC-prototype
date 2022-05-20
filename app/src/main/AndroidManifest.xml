@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SLCPrototype">
         <activity
+            android:name=".ClassHomeScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".JoinClassActivity"
             android:exported="false"
             android:screenOrientation="portrait"

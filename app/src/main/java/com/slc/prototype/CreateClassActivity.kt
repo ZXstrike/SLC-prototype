@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
 import android.view.View
 import com.bumptech.glide.Glide
@@ -76,7 +77,7 @@ class CreateClassActivity : AppCompatActivity() {
                 dataBaseRef.get().addOnSuccessListener { document ->
                     if (document != null){
                         refPicture.downloadUrl.addOnSuccessListener {
-                            dataBaseRef.update("classPicture", it.toString())
+                            dataBaseRef.update("classPictureUrl", it.toString())
                         }
                     }
                 }
@@ -86,7 +87,7 @@ class CreateClassActivity : AppCompatActivity() {
                 dataBaseRef.get().addOnSuccessListener { document ->
                     if (document != null){
                         refBanner.downloadUrl.addOnSuccessListener {
-                            dataBaseRef.update("classBanner", it.toString())
+                            dataBaseRef.update("classBannerUrl", it.toString())
                         }
                     }
                 }
@@ -105,22 +106,22 @@ class CreateClassActivity : AppCompatActivity() {
         val newClassData = hashMapOf(
             "className" to className,
             "classDesc" to classDesc,
-            "classPictureUrl" to "https://firebasestorage.googleapis.com/v0/b/slc-prototype.appspot.com/o/SLC%20Logo-07.png?alt=media&token=2030e52b-0cc4-4fb0-ac6a-ce9dd5f0c52b",
-            "classBannerUrl" to "",
             "classAdmin" to userid,
             "classMember" to arrayListOf<String>(),
             "fileList"  to arrayListOf<String>()
         )
-        val userRef = Firebase.firestore.collection("User").document(userid!!)
-        val classRef = Firebase.firestore.collection("Class")
+        val userRef = Firebase.firestore.collection("Users").document(userid!!)
+        val classRef = Firebase.firestore.collection("Class").document(classId)
         userRef.update("userClassList", FieldValue.arrayUnion(classId))
             .addOnSuccessListener {
-                classRef.document(classId)
+                classRef
                     .set(newClassData).addOnSuccessListener {
                         classDatabaseId = classId
                         uploadImageToFirebaseStorage()
                     }
             }
-        onBackPressed()
+        Handler().postDelayed({
+            onBackPressed()
+        },1500)
     }
 }

@@ -353,7 +353,7 @@
                     android:layout_weight="1"
                     android:src="@drawable/close_icon"
                     app:tint="@color/black"
-                    android:onClick="close_overlay"/>
+                    android:onClick="closeOverlay"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
