@@ -3,6 +3,7 @@ package com.slc.prototype
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,13 +22,17 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         auth = Firebase.auth
         val recyclerView : RecyclerView = findViewById(R.id.class_list)
-        classAdapter = ClassAdapter(classList)
+        classAdapter = ClassAdapter(classList){
+            Toast.makeText(this, it.getID().toString(), Toast.LENGTH_SHORT).show()
+        }
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = layoutManager
         recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.adapter = classAdapter
         prepareClassData()
     }
+
+    //private fun onClickAdapter()
 
     private fun prepareClassData(){
         val db = Firebase.firestore
@@ -37,6 +42,7 @@ class HomeActivity : AppCompatActivity() {
             .addOnSuccessListener { document ->
                 val userClassList = document.get("userClassList") as List<*>
                 userClassList.forEach { id ->
+                    val classID = id.toString()
                     db.collection("Class").document(id.toString())
                         .get()
                         .addOnSuccessListener { document ->
@@ -46,7 +52,7 @@ class HomeActivity : AppCompatActivity() {
                                 .get()
                                 .addOnSuccessListener {
                                     val teacher = it.get("name").toString()
-                                    val classData = ClassData(name, teacher, image)
+                                    val classData = ClassData(name, teacher, image, classID)
                                     classList.add(classData)
                                     classAdapter.notifyDataSetChanged()
                                 }
