@@ -39,22 +39,20 @@ class HomeActivity : AppCompatActivity() {
                 userClassList.forEach { id ->
                     db.collection("Class").document(id.toString())
                         .get()
-                        .addOnSuccessListener {
-                            val name = it.get("className").toString()
-                            val image = it.get("classPictureUrl").toString()
-                            db.collection("Users").document(it.get("classAdmin").toString())
+                        .addOnSuccessListener { document ->
+                            val name = document.get("className").toString()
+                            val image = document.get("classPictureUrl").toString()
+                            db.collection("Users").document(document.get("classAdmin").toString())
                                 .get()
                                 .addOnSuccessListener {
                                     val teacher = it.get("name").toString()
-                                    var classData = ClassData(name, teacher, image)
+                                    val classData = ClassData(name, teacher, image)
                                     classList.add(classData)
                                     classAdapter.notifyDataSetChanged()
                                 }
                         }
                     }
                 }
-
-
     }
 
     fun home(view: View){
