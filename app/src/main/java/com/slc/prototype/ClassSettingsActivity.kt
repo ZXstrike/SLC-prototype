@@ -1,7 +1,5 @@
 package com.slc.prototype
 
-import android.content.Intent
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,19 +9,20 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_class_home_screen.*
-import kotlinx.android.synthetic.main.class_card_layout.*
+import kotlinx.android.synthetic.main.activity_class_home_screen.class_name_title
+import kotlinx.android.synthetic.main.activity_class_home_screen.class_picture
+import kotlinx.android.synthetic.main.activity_class_settings.*
 
-const val CURRENTCLASSID = "currentID"
-class ClassHomeScreenActivity : AppCompatActivity() {
+class ClassSettingsActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    var currentClassID: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_class_home_screen)
+        setContentView(R.layout.activity_class_settings)
         auth = Firebase.auth
+        var currentClassID: String? = null
         val bundle: Bundle? = intent.extras
         if (bundle != null){
-            currentClassID = bundle.getString(CLASS_ID)
+            currentClassID = bundle.getString(CURRENTCLASSID)
         }
 
         val db = Firebase.firestore
@@ -33,16 +32,14 @@ class ClassHomeScreenActivity : AppCompatActivity() {
                 class_name_title.text = className.toString()
                 val classPicture = it.get("classPictureUrl")
                 Glide.with(applicationContext).load(classPicture).into(class_picture)
+                val classBanner = it.get("classBannerUrl")
+                Glide.with(applicationContext).load(classBanner).into(class_banner)
                 val classAdmin = it.get("classAdmin").toString()
-                if (auth.uid == classAdmin){
-                    post_button.visibility = View.VISIBLE
-                }
+                db.collection("Users").document(classAdmin).get()
+                    .addOnSuccessListener { doc ->
+                        val teacherName = doc.get("name").toString()
+                        teacher_name.text = teacherName
+                    }
             }
-     }
-
-    fun classSettings(view: View) {
-        val intent = Intent(this, ClassSettingsActivity::class.java)
-        intent.putExtra(CURRENTCLASSID, currentClassID)
-        startActivity(intent)
     }
 }

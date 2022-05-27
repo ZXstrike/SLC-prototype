@@ -13,6 +13,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+const val CLASS_ID = "ClassID"
+
 class HomeActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private val classList : ArrayList<ClassData> = ArrayList()
@@ -23,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
         auth = Firebase.auth
         val recyclerView : RecyclerView = findViewById(R.id.class_list)
         classAdapter = ClassAdapter(classList){
-            Toast.makeText(this, it.getID().toString(), Toast.LENGTH_SHORT).show()
+            onClickAdapter(it.getID().toString())
         }
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = layoutManager
@@ -32,7 +34,11 @@ class HomeActivity : AppCompatActivity() {
         prepareClassData()
     }
 
-    //private fun onClickAdapter()
+    private fun onClickAdapter(classID :String){
+        val intent = Intent(this, ClassHomeScreenActivity::class.java)
+        intent.putExtra(CLASS_ID, classID)
+        startActivity(intent)
+    }
 
     private fun prepareClassData(){
         val db = Firebase.firestore

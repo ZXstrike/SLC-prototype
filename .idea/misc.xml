@@ -22,13 +22,17 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/person_nav_icon.xml" value="0.1345" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_backgound_rounded_5dp.xml" value="0.229" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_background.xml" value="0.216" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_background_5dp.xml" value="0.12" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_background_rounded_5dp.xml" value="0.208" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_circle_background.xml" value="0.137" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout-v28/activity_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout-v28/colors.xml" value="0.22236286919831225" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_add_class.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_chat.xml" value="0.22521367521367522" />
-        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_home_screen.xml" value="0.13846153846153847" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_home_screen.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_manage.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_management.xml" value="0.264" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_settings.xml" value="0.4" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_create_class.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_edit_profile.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_home.xml" value="0.22521367521367522" />

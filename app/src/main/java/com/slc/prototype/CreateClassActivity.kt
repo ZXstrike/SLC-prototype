@@ -122,6 +122,6 @@ class CreateClassActivity : AppCompatActivity() {
             }
         Handler().postDelayed({
             onBackPressed()
-        },1500)
+        },0)
     }
 }

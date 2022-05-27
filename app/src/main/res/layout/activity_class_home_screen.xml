@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/secondaryLightColor"
     tools:context=".ClassHomeScreenActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/white_background_5dp"
+            android:layout_gravity="top"
+            android:elevation="3dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/left_arrow_icon"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/black"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/class_picture"
+                app:shapeAppearanceOverlay="@style/roundedCorners5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slc_logo"
+                android:elevation="5dp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:paddingVertical="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/white_background_5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/class_name_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/lato_black"
+                    android:textSize="19dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/ellipsis_icon"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/black"
+                android:onClick="classSettings"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_background"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:text="Home"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:text="Task"/>
+            </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingHorizontal="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/post_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="end"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/add_button"
+            app:tint="@color/light_blue" />
+    </RelativeLayout>
+</FrameLayout>

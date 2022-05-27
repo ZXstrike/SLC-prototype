@@ -10,4 +10,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pure_white">#F6F6F6F6</color>
     <color name="gray">#B1B1B1</color>
+    <color name="primaryColor">#0277bd</color>
+    <color name="primaryLightColor">#58a5f0</color>
+    <color name="primaryDarkColor">#004c8c</color>
+    <color name="secondaryColor">#01579b</color>
+    <color name="secondaryLightColor">#4f83cc</color>
+    <color name="secondaryDarkColor">#002f6c</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
 </resources>

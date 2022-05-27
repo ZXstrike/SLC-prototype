@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SLCPrototype">
         <activity
+            android:name=".ClassSettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ClassHomeScreenActivity"
             android:exported="false" />
         <activity
