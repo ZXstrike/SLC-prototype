@@ -32,10 +32,10 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_home_screen.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_manage.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_management.xml" value="0.264" />
-        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_settings.xml" value="0.4" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_settings.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_create_class.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_edit_profile.xml" value="0.264" />
-        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_home.xml" value="0.22521367521367522" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_join_class.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -43,7 +43,7 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_register_acitivity.xml" value="0.16452991452991453" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_task.xml" value="0.22521367521367522" />
-        <entry key="..\:/SLCPrototype/app/src/main/res/layout/class_card_layout.xml" value="0.2" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/class_card_layout.xml" value="0.5397727272727273" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/fragment_bottom_nav.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.217" />
       </map>

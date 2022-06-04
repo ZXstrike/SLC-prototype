@@ -18,7 +18,6 @@ class ClassAdapter(private var classList : List<ClassData>, private val clickLis
 
     class ClassViewHolder(view: View, clickAtPosition: (Int) -> Unit ) : RecyclerView.ViewHolder(view){
         val name : TextView = view.findViewById(R.id.class_name_card)
-        val teacher : TextView = view.findViewById(R.id.teacher_name)
         val image : ImageView = view.findViewById(R.id.class_image)
 
         init {
@@ -40,7 +39,6 @@ class ClassAdapter(private var classList : List<ClassData>, private val clickLis
     override fun onBindViewHolder(holder: ClassViewHolder, position: Int) {
         val classData = classList[position]
         holder.name.text = classData.getName()
-        holder.teacher.text = classData.getTeacher()
         Glide.with(holder.image.context).load(classData.getImage()).into(holder.image)
     }
 

@@ -1,17 +1,21 @@
 package com.slc.prototype
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_home.*
 
 const val CLASS_ID = "ClassID"
 
@@ -27,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
         classAdapter = ClassAdapter(classList){
             onClickAdapter(it.getID().toString())
         }
-        val layoutManager = LinearLayoutManager(applicationContext)
+        val layoutManager = GridLayoutManager(applicationContext, 2)
         recyclerView.layoutManager = layoutManager
         recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.adapter = classAdapter
@@ -46,6 +50,8 @@ class HomeActivity : AppCompatActivity() {
         db.collection("Users").document(userId!!)
             .get()
             .addOnSuccessListener { document ->
+                Glide.with(applicationContext).load(document.get("profilePictureUrl")).into(user_profile_picture)
+                user_name.text = "Welcome, " +document.get("name").toString()
                 val userClassList = document.get("userClassList") as List<*>
                 userClassList.forEach { id ->
                     val classID = id.toString()
@@ -54,40 +60,26 @@ class HomeActivity : AppCompatActivity() {
                         .addOnSuccessListener { document ->
                             val name = document.get("className").toString()
                             val image = document.get("classPictureUrl").toString()
-                            db.collection("Users").document(document.get("classAdmin").toString())
-                                .get()
-                                .addOnSuccessListener {
-                                    val teacher = it.get("name").toString()
-                                    val classData = ClassData(name, teacher, image, classID)
-                                    classList.add(classData)
-                                    classAdapter.notifyDataSetChanged()
-                                }
+                            val classData = ClassData(name, image, classID)
+                            classList.add(classData)
+                            classAdapter.notifyDataSetChanged()
                         }
                     }
                 }
     }
 
-    fun home(view: View){
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
-        finish()
+    @SuppressLint("ResourceAsColor")
+    fun viewClass(view: View) {
+        task_button.setBackgroundColor(Color.WHITE)
+        class_button.setBackgroundColor(R.color.Medium_Blue)
+        task_list.visibility = View.GONE
+        class_list.visibility = View.VISIBLE
+    }
+    fun viewTask(view: View) {
+        class_list.visibility = View.GONE
+        task_list.visibility = View.VISIBLE
     }
 
-    fun folder(view: View){
-        val intent = Intent(this, TaskActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
+    fun showMenu(view: View) {}
 
-    fun chat(view: View){
-        val intent = Intent(this, ChatActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    fun profile(view: View){
-        val intent = Intent(this, ProfileActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
 }

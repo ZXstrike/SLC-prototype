@@ -13,10 +13,14 @@
         android:theme="@style/Theme.SLCPrototype">
         <activity
             android:name=".ClassSettingsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ClassHomeScreenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"  />
         <activity
             android:name=".JoinClassActivity"
             android:exported="false"
@@ -29,16 +33,6 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".EditProfileActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ChatActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".TaskActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />

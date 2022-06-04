@@ -97,30 +97,6 @@ class ProfileActivity : AppCompatActivity() {
         add_class_ui.visibility = View.GONE
     }
 
-    fun home(view: View){
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    fun folder(view: View){
-        val intent = Intent(this, TaskActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    fun chat(view: View){
-        val intent = Intent(this, ChatActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    fun profile(view: View){
-        val intent = Intent(this, ProfileActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
     fun logout(view: View){
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)

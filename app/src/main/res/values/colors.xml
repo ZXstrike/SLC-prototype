@@ -7,7 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="light_blue">#5B9DC2</color>
     <color name="black">#3A3A3A</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="pure_white">#F6F6F6F6</color>
     <color name="gray">#B1B1B1</color>
     <color name="primaryColor">#0277bd</color>
@@ -18,4 +17,11 @@
     <color name="secondaryDarkColor">#002f6c</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#ffffff</color>
+
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="Dark_Blue">#00171F</color>
+    <color name="Medium_Blue">#003459</color>
+    <color name="Blue">#007EA7</color>
+    <color name="Light_Blue">#00A8E8</color>
 </resources>
