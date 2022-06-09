@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="25dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:backgroundTint="@color/white"
+            android:elevation="3dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Fri"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="20/12"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="2022"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"/>
+        </LinearLayout>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="10dp"
+        android:layout_gravity="center"
+        android:text="Evaluasi Bahasa Indonesia Bab 13"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_regular"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

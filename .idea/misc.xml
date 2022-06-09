@@ -8,8 +8,13 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable-v24/slc_logo.xml" value="0.272" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable-v24/white_background_rounded.xml" value="0.229" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/add_button.xml" value="0.217" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/add_button_icon.xml" value="0.201" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/arrow_left_icon.xml" value="0.217" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/chat_nav_icon.xml" value="0.229" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/checked_radio_button.xml" value="0.1095" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/checked_radio_button_left.xml" value="0.184" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/checked_radio_button_right.xml" value="0.184" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/ellipsis_icon.xml" value="0.183" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/file_nav_icon.xml" value="0.229" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/home_nav_icon.xml" value="0.229" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/home_nav_icon_black.xml" value="0.208" />
@@ -20,6 +25,13 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/person_log.xml" value="0.1345" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/person_nav_icon.xml" value="0.1345" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/radio_button_left.xml" value="0.184" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/radio_button_right.xml" value="0.1095" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/radio_button_template.xml" value="0.213" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/regular_radio_button.xml" value="0.1095" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/regular_radio_button_left.xml" value="0.184" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/regular_radio_button_right.xml" value="0.184" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/drawable/text_radio_button.xml" value="0.183" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_backgound_rounded_5dp.xml" value="0.229" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_background.xml" value="0.216" />
         <entry key="..\:/SLCPrototype/app/src/main/res/drawable/white_background_5dp.xml" value="0.12" />
@@ -29,7 +41,7 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/layout-v28/colors.xml" value="0.22236286919831225" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_add_class.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_chat.xml" value="0.22521367521367522" />
-        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_home_screen.xml" value="0.264" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_home_screen.xml" value="0.2982866043613707" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_manage.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_management.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_class_settings.xml" value="0.264" />
@@ -39,12 +51,16 @@
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_join_class.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_material_post.xml" value="0.264" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_register_acitivity.xml" value="0.16452991452991453" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_task.xml" value="0.22521367521367522" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/activity_task_post.xml" value="0.22521367521367522" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/class_card_layout.xml" value="0.5397727272727273" />
         <entry key="..\:/SLCPrototype/app/src/main/res/layout/fragment_bottom_nav.xml" value="0.22521367521367522" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/material_post_card.xml" value="0.264" />
+        <entry key="..\:/SLCPrototype/app/src/main/res/layout/task_card_layout.xml" value="0.264" />
         <entry key="..\:/SLCPrototype/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.217" />
       </map>
     </option>

@@ -47,7 +47,6 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
         val db = Firebase.firestore
         val userData = auth.uid
         val docRef = db.collection("Users").document(userData!!)

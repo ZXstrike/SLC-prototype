@@ -9,4 +9,7 @@
     <item name="add_class" type="id" />
     <item name="create_class" type="id" />
     <item name="class_banner" type="id" />
+    <item name="showClass" type="id" />
+    <item name="class_button" type="id" />
+    <item name="material_button" type="id" />
 </resources>

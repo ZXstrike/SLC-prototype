@@ -1,5 +1,6 @@
 package com.slc.prototype
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         if (isNetworkAvailable()){
             Handler().postDelayed({
                 val intent = Intent(this@MainActivity, LoginActivity::class.java)
-                startActivity(intent)
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                 finish()
             },2000)
         }else{
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val activeNetworkInfo = connectivityManager.activeNetworkInfo
         return activeNetworkInfo != null && activeNetworkInfo.isConnected
     }
+
 
 
 }

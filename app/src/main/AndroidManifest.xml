@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SLCPrototype">
         <activity
+            android:name=".TaskPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MaterialPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".ClassSettingsActivity"
             android:exported="false"
             android:screenOrientation="portrait"
@@ -20,7 +26,7 @@
             android:name=".ClassHomeScreenActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"  />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".JoinClassActivity"
             android:exported="false"

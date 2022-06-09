@@ -1,11 +1,9 @@
 package com.slc.prototype
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,6 +14,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_home.user_profile_picture
 
 const val CLASS_ID = "ClassID"
 
@@ -36,6 +35,28 @@ class HomeActivity : AppCompatActivity() {
         recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.adapter = classAdapter
         prepareClassData()
+
+    }
+
+    fun onRadioButtonClicked(view: View){
+        if (view is RadioButton) {
+            // Is the button now checked?
+            val checked = view.isChecked
+
+            // Check which radio button was clicked
+            when (view.getId()) {
+                R.id.class_button ->
+                    if (checked) {
+                        class_list.visibility = View.VISIBLE
+                        task_list.visibility = View.GONE
+                    }
+                R.id.task_button ->
+                    if (checked) {
+                        class_list.visibility = View.GONE
+                        task_list.visibility = View.VISIBLE
+                    }
+            }
+        }
     }
 
     private fun onClickAdapter(classID :String){
@@ -65,21 +86,25 @@ class HomeActivity : AppCompatActivity() {
                             classAdapter.notifyDataSetChanged()
                         }
                     }
-                }
+                }.addOnCompleteListener{
+                    progress_bar.visibility = View.GONE
+            }
     }
 
-    @SuppressLint("ResourceAsColor")
-    fun viewClass(view: View) {
-        task_button.setBackgroundColor(Color.WHITE)
-        class_button.setBackgroundColor(R.color.Medium_Blue)
-        task_list.visibility = View.GONE
-        class_list.visibility = View.VISIBLE
-    }
-    fun viewTask(view: View) {
-        class_list.visibility = View.GONE
-        task_list.visibility = View.VISIBLE
+    fun showMenu(view: View) {
+        menu_list.visibility = View.VISIBLE
     }
 
-    fun showMenu(view: View) {}
+    fun closeOverlay(view: View) {
+        menu_list.visibility = View.GONE
+    }
 
+    /*fun addClass(view: View){
+        add_class_ui.visibility = View.VISIBLE
+    }*/
+
+    fun goToSettings(view: View) {
+        startActivity(Intent(this, ProfileActivity::class.java))
+        menu_list.visibility = View.GONE
+    }
 }

@@ -258,9 +258,6 @@
         </RelativeLayout>
     </FrameLayout>
 
-
-
-
     <FrameLayout
         android:id="@+id/add_class_ui"
         android:layout_width="match_parent"
